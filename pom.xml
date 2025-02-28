@@ -159,6 +159,16 @@
 
     <build>
         <plugins>
+	    <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.1</version>
+            <configuration>
+                <!-- Optional: Customize the webapp name -->
+                <webappDirectory>${project.build.directory}/webapp</webappDirectory>
+                <warName>${project.artifactId}</warName>
+            </configuration>
+        </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
